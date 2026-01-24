@@ -1037,6 +1037,9 @@
         // --- Functions ---
 
         function addToCart(id, name, price) {
+            // Parse price to ensure it's a number, removing any non-numeric characters
+            const parsedPrice = parseInt(price.toString().replace(/[^\d]/g, ''));
+
             // Check if item needs customization
             // Heuristic: If name contains "Roll", invoke customizer.
             // Or we could have a specific flag. Let's use "Roll" keyword logic for now as requested.
@@ -1044,10 +1047,10 @@
             const isCustomizable = name.toLowerCase().includes('roll') && !name.toLowerCase().includes('combo');
 
             if (isCustomizable) {
-                openCustomizer(id, name, price);
+                openCustomizer(id, name, parsedPrice);
             } else {
                 // Simple Add
-                addItemToCartState(id, name, price, null, id);
+                addItemToCartState(id, name, parsedPrice, null, id);
             }
         }
 
@@ -1177,33 +1180,28 @@
             let totalQty = 0;
             let totalPrice = 0;
 
-            // Reset all counters on page first (naive approach for simplicity)
-            // Or better: map cart items back to their parent IDs using the parentId field
+            // Map parentId to total count
+            const counts = {};
 
-            const counts = {}; // parentId -> totalQty
+            // First, reset all on-screen counters to 0 and show Add buttons
+            document.querySelectorAll('.qty-val').forEach(el => el.innerText = '0');
+            document.querySelectorAll('.item-controls').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.add-btn').forEach(el => el.style.display = 'block');
 
+            // Then iterate cart to build sums
             for (let k in cart) {
                 const item = cart[k];
-                const cleanParentId = item.parentId;
+                // Ensure parentId exists. If simple item, parentId might be same as key.
+                const pid = item.parentId || k;
 
-                if (!counts[cleanParentId]) counts[cleanParentId] = 0;
-                counts[cleanParentId] += item.qty;
+                if (!counts[pid]) counts[pid] = 0;
+                counts[pid] += item.qty;
 
                 totalQty += item.qty;
                 totalPrice += item.qty * item.price;
             }
 
-            // Update DOM counters
-            // We iterate over all controls we know exist? 
-            // Or just iterate the counts we found.
-            // Problem: If count goes to 0, it won't be in loop.
-            // Solution: We need to clear previous state or assume 0 unless set.
-
-            // Getting all Qty Val spans to reset 0
-            document.querySelectorAll('.qty-val').forEach(el => el.innerText = '0');
-            document.querySelectorAll('.item-controls').forEach(el => el.style.display = 'none');
-            document.querySelectorAll('.add-btn').forEach(el => el.style.display = 'block');
-
+            // Now apply correct counts to DOM
             for (let pid in counts) {
                 const qty = counts[pid];
                 if (qty > 0) {
@@ -1211,23 +1209,30 @@
                     const btnAdd = document.getElementById(`btn-add-${pid}`);
                     const controls = document.getElementById(`controls-${pid}`);
 
-                    if (qtyEl) qtyEl.innerText = qty;
-                    if (btnAdd) btnAdd.style.display = 'none';
-                    if (controls) controls.style.display = 'flex';
+                    if (qtyEl) {
+                        qtyEl.innerText = qty;
+                        if (btnAdd) btnAdd.style.display = 'none';
+                        if (controls) controls.style.display = 'flex';
+                    }
                 }
             }
 
-            // Cart Bar
+            // Cart Bar visibility
             document.getElementById('cart-count').innerText = `${totalQty} Item${totalQty !== 1 ? 's' : ''}`;
             document.getElementById('cart-total').innerText = `${totalPrice} ฿`;
             document.getElementById('modal-total').innerText = `${totalPrice} ฿`;
 
             const cartBar = document.getElementById('cart-bar');
-            if (totalQty > 0) {
-                cartBar.classList.add('visible');
-            } else {
-                cartBar.classList.remove('visible');
-                closeCart();
+            if (cartBar) {
+                if (totalQty > 0) {
+                    cartBar.classList.add('visible');
+                } else {
+                    cartBar.classList.remove('visible');
+                    // Only close modal if it's the cart modal AND empty? 
+                    // Actually if empty, we might want to close cart modal.
+                    const cartModal = document.getElementById('cart-modal');
+                    if (cartModal && cartModal.style.display === 'flex') cartModal.style.display = 'none';
+                }
             }
         }
 
@@ -1273,16 +1278,17 @@
             }
 
             // Simple helper for direct increment
-            window.incrementItem = function (key) {
-                if (cart[key]) {
-                    cart[key].qty++;
-                    updateUI();
-                    viewCart();
-                }
-            };
-
             // Finalize modal open
             document.getElementById('cart-modal').style.display = 'flex';
+        }
+
+        // Global increment helper
+        function incrementItem(key) {
+            if (cart[key]) {
+                cart[key].qty++;
+                updateUI();
+                viewCart();
+            }
         }
 
         // Final Checkout
