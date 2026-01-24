@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Baap of Rolls | Premium Menu</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&amp;family=Playfair+Display:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet"/>
-<style>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Baap of Rolls | Premium Menu</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&amp;family=Playfair+Display:ital,wght@0,600;1,600&amp;display=swap"
+        rel="stylesheet" />
+    <style>
         :root {
             /* Premium Dark Theme Palette */
             --bg-dark: #0f1115;
@@ -412,606 +415,809 @@
         }
     </style>
 </head>
+
 <body>
-<div class="header">
-<div class="header-content">
-<img alt="Baap of Rolls Logo" class="header-logo" src="images/logo.jpg"/>
-<div class="header-text">
-<h1>Baap of Rolls</h1>
-<p>Crispy, Crunchy &amp; Addictive</p>
-</div>
-</div>
-</div>
-<div class="container">
-<!-- Classic Rolls -->
-<div class="category-wrapper delay-1">
-<h2 class="category-title"><span>🌯</span> Classic Rolls</h2>
-<p class="category-desc">Served in your choice of Paratha or other breads</p>
-<div class="item">
-<img alt="Anda Roll" class="item-image" src="images/Double egg roll.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name"><span class="icon-indicator icon-nonveg"></span>Anda Roll</span>
-<div class="price-action-group">
-<div class="item-price">100 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-andaRoll" onclick="addToCart('andaRoll', 'Anda Roll', 100)">ADD</button>
-<div class="item-controls" id="controls-andaRoll">
-<button class="qty-btn" onclick="removeFromCart('andaRoll')">-</button>
-<span class="qty-val" id="qty-andaRoll">0</span>
-<button class="qty-btn" onclick="addToCart('andaRoll', 'Anda Roll', 100)">+</button>
-</div>
-</div>
-</div>
-</div>
-<span class="item-desc">Flatbread layered with fresh beaten egg. Simple &amp; classic.</span>
-</div>
-</div>
-<div class="item">
-<img alt="Aloo Masala Roll" class="item-image" src="images/aloo roll.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name"><span class="icon-indicator icon-veg"></span>Aloo Masala Roll</span>
-<div class="price-action-group">
-<div class="item-price">139 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-alooMasalaRoll" onclick="addToCart('alooMasalaRoll', 'Aloo Masala Roll', 139)">ADD</button>
-<div class="item-controls" id="controls-alooMasalaRoll">
-<button class="qty-btn" onclick="removeFromCart('alooMasalaRoll')">-</button>
-<span class="qty-val" id="qty-alooMasalaRoll">0</span>
-<button class="qty-btn" onclick="addToCart('alooMasalaRoll', 'Aloo Masala Roll', 139)">+</button>
-</div>
-</div>
-</div>
-</div>
-<span class="item-desc">Spiced mashed potato with onions, tomatoes &amp; herbs.</span>
-</div>
-</div>
-<div class="item">
-<img alt="Anda Aloo Roll" class="item-image" src="images/Double egg roll.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name"><span class="icon-indicator icon-nonveg"></span>Anda Aloo Roll</span>
-<div class="price-action-group">
-<div class="item-price">149 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-andaAlooRoll" onclick="addToCart('andaAlooRoll', 'Anda Aloo Roll', 149)">ADD</button>
-<div class="item-controls" id="controls-andaAlooRoll">
-<button class="qty-btn" onclick="removeFromCart('andaAlooRoll')">-</button>
-<span class="qty-val" id="qty-andaAlooRoll">0</span>
-<button class="qty-btn" onclick="addToCart('andaAlooRoll', 'Anda Aloo Roll', 149)">+</button>
-</div>
-</div>
-</div>
-</div>
-<span class="item-desc">Egg layered flatbread with spiced Aloo Masala filling.</span>
-</div>
-</div>
-<div class="item">
-<img alt="Paneer Tikka Roll" class="item-image" src="images/paneer roll.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name"><span class="icon-indicator icon-veg"></span>Paneer Tikka Roll</span>
-<div class="price-action-group">
-<div class="item-price">169 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-paneerTikkaRoll" onclick="addToCart('paneerTikkaRoll', 'Paneer Tikka Roll', 169)">ADD</button>
-<div class="item-controls" id="controls-paneerTikkaRoll">
-<button class="qty-btn" onclick="removeFromCart('paneerTikkaRoll')">-</button>
-<span class="qty-val" id="qty-paneerTikkaRoll">0</span>
-<button class="qty-btn" onclick="addToCart('paneerTikkaRoll', 'Paneer Tikka Roll', 169)">+</button>
-</div>
-</div>
-</div>
-</div>
-<span class="item-desc">Cottage cheese marinated in yogurt &amp; spices, flame grilled.</span>
-</div>
-</div>
-<div class="item">
-<img alt="Anda Paneer Roll" class="item-image" src="images/Paneer wheat roll.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name"><span class="icon-indicator icon-nonveg"></span>Anda Paneer Roll</span>
-<div class="price-action-group">
-<div class="item-price">179 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-andaPaneerRoll" onclick="addToCart('andaPaneerRoll', 'Anda Paneer Roll', 179)">ADD</button>
-<div class="item-controls" id="controls-andaPaneerRoll">
-<button class="qty-btn" onclick="removeFromCart('andaPaneerRoll')">-</button>
-<span class="qty-val" id="qty-andaPaneerRoll">0</span>
-<button class="qty-btn" onclick="addToCart('andaPaneerRoll', 'Anda Paneer Roll', 179)">+</button>
-</div>
-</div>
-</div>
-</div>
-<span class="item-desc">Egg layered flatbread with Paneer Tikka filling.</span>
-</div>
-</div>
-<div class="item">
-<img alt="Malai Paneer Tikka" class="item-image" src="images/Malai paneer  roll.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name"><span class="icon-indicator icon-veg"></span>Malai Paneer Tikka</span>
-<div class="price-action-group">
-<div class="item-price">189 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-malaiPaneerTikka" onclick="addToCart('malaiPaneerTikka', 'Malai Paneer Tikka', 189)">ADD</button>
-<div class="item-controls" id="controls-malaiPaneerTikka">
-<button class="qty-btn" onclick="removeFromCart('malaiPaneerTikka')">-</button>
-<span class="qty-val" id="qty-malaiPaneerTikka">0</span>
-<button class="qty-btn" onclick="addToCart('malaiPaneerTikka', 'Malai Paneer Tikka', 189)">+</button>
-</div>
-</div>
-</div>
-</div>
-<span class="item-desc">Marinated in fresh cream &amp; mild spices. Melt-in-mouth texture.</span>
-</div>
-</div>
-<div class="item">
-<img alt="Chicken Tikka Roll" class="item-image" src="images/Classic chicken roll1.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name"><span class="icon-indicator icon-nonveg"></span>Chicken Tikka
+    <div class="header">
+        <div class="header-content">
+            <img alt="Baap of Rolls Logo" class="header-logo" src="images/logo.jpg" />
+            <div class="header-text">
+                <h1>Baap of Rolls</h1>
+                <p>Crispy, Crunchy &amp; Addictive</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Classic Rolls -->
+        <div class="category-wrapper delay-1">
+            <h2 class="category-title"><span>🌯</span> Classic Rolls</h2>
+            <p class="category-desc">Served in your choice of Paratha or other breads</p>
+            <div class="item">
+                <img alt="Anda Roll" class="item-image" src="images/Double egg roll.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name"><span class="icon-indicator icon-nonveg"></span>Anda Roll</span>
+                        <div class="price-action-group">
+                            <div class="item-price">100 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-andaRoll"
+                                    onclick="addToCart('andaRoll', 'Anda Roll', 100)">ADD</button>
+                                <div class="item-controls" id="controls-andaRoll">
+                                    <button class="qty-btn" onclick="removeFromCart('andaRoll')">-</button>
+                                    <span class="qty-val" id="qty-andaRoll">0</span>
+                                    <button class="qty-btn" onclick="addToCart('andaRoll', 'Anda Roll', 100)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="item-desc">Flatbread layered with fresh beaten egg. Simple &amp; classic.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Aloo Masala Roll" class="item-image" src="images/aloo roll.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name"><span class="icon-indicator icon-veg"></span>Aloo Masala Roll</span>
+                        <div class="price-action-group">
+                            <div class="item-price">139 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-alooMasalaRoll"
+                                    onclick="addToCart('alooMasalaRoll', 'Aloo Masala Roll', 139)">ADD</button>
+                                <div class="item-controls" id="controls-alooMasalaRoll">
+                                    <button class="qty-btn" onclick="removeFromCart('alooMasalaRoll')">-</button>
+                                    <span class="qty-val" id="qty-alooMasalaRoll">0</span>
+                                    <button class="qty-btn"
+                                        onclick="addToCart('alooMasalaRoll', 'Aloo Masala Roll', 139)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="item-desc">Spiced mashed potato with onions, tomatoes &amp; herbs.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Anda Aloo Roll" class="item-image" src="images/Double egg roll.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name"><span class="icon-indicator icon-nonveg"></span>Anda Aloo Roll</span>
+                        <div class="price-action-group">
+                            <div class="item-price">149 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-andaAlooRoll"
+                                    onclick="addToCart('andaAlooRoll', 'Anda Aloo Roll', 149)">ADD</button>
+                                <div class="item-controls" id="controls-andaAlooRoll">
+                                    <button class="qty-btn" onclick="removeFromCart('andaAlooRoll')">-</button>
+                                    <span class="qty-val" id="qty-andaAlooRoll">0</span>
+                                    <button class="qty-btn"
+                                        onclick="addToCart('andaAlooRoll', 'Anda Aloo Roll', 149)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="item-desc">Egg layered flatbread with spiced Aloo Masala filling.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Paneer Tikka Roll" class="item-image" src="images/paneer roll.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name"><span class="icon-indicator icon-veg"></span>Paneer Tikka Roll</span>
+                        <div class="price-action-group">
+                            <div class="item-price">169 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-paneerTikkaRoll"
+                                    onclick="addToCart('paneerTikkaRoll', 'Paneer Tikka Roll', 169)">ADD</button>
+                                <div class="item-controls" id="controls-paneerTikkaRoll">
+                                    <button class="qty-btn" onclick="removeFromCart('paneerTikkaRoll')">-</button>
+                                    <span class="qty-val" id="qty-paneerTikkaRoll">0</span>
+                                    <button class="qty-btn"
+                                        onclick="addToCart('paneerTikkaRoll', 'Paneer Tikka Roll', 169)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="item-desc">Cottage cheese marinated in yogurt &amp; spices, flame grilled.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Anda Paneer Roll" class="item-image" src="images/Paneer wheat roll.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name"><span class="icon-indicator icon-nonveg"></span>Anda Paneer Roll</span>
+                        <div class="price-action-group">
+                            <div class="item-price">179 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-andaPaneerRoll"
+                                    onclick="addToCart('andaPaneerRoll', 'Anda Paneer Roll', 179)">ADD</button>
+                                <div class="item-controls" id="controls-andaPaneerRoll">
+                                    <button class="qty-btn" onclick="removeFromCart('andaPaneerRoll')">-</button>
+                                    <span class="qty-val" id="qty-andaPaneerRoll">0</span>
+                                    <button class="qty-btn"
+                                        onclick="addToCart('andaPaneerRoll', 'Anda Paneer Roll', 179)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="item-desc">Egg layered flatbread with Paneer Tikka filling.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Malai Paneer Tikka" class="item-image" src="images/Malai paneer  roll.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name"><span class="icon-indicator icon-veg"></span>Malai Paneer Tikka</span>
+                        <div class="price-action-group">
+                            <div class="item-price">189 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-malaiPaneerTikka"
+                                    onclick="addToCart('malaiPaneerTikka', 'Malai Paneer Tikka', 189)">ADD</button>
+                                <div class="item-controls" id="controls-malaiPaneerTikka">
+                                    <button class="qty-btn" onclick="removeFromCart('malaiPaneerTikka')">-</button>
+                                    <span class="qty-val" id="qty-malaiPaneerTikka">0</span>
+                                    <button class="qty-btn"
+                                        onclick="addToCart('malaiPaneerTikka', 'Malai Paneer Tikka', 189)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="item-desc">Marinated in fresh cream &amp; mild spices. Melt-in-mouth texture.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Chicken Tikka Roll" class="item-image" src="images/Classic chicken roll1.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name"><span class="icon-indicator icon-nonveg"></span>Chicken Tikka
                             Roll</span>
-<div class="price-action-group">
-<div class="item-price">189 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-chickenTikkaRoll" onclick="addToCart('chickenTikkaRoll', 'Chicken Tikka
+                        <div class="price-action-group">
+                            <div class="item-price">189 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-chickenTikkaRoll" onclick="addToCart('chickenTikkaRoll', 'Chicken Tikka
                             Roll', 189)">ADD</button>
-<div class="item-controls" id="controls-chickenTikkaRoll">
-<button class="qty-btn" onclick="removeFromCart('chickenTikkaRoll')">-</button>
-<span class="qty-val" id="qty-chickenTikkaRoll">0</span>
-<button class="qty-btn" onclick="addToCart('chickenTikkaRoll', 'Chicken Tikka
+                                <div class="item-controls" id="controls-chickenTikkaRoll">
+                                    <button class="qty-btn" onclick="removeFromCart('chickenTikkaRoll')">-</button>
+                                    <span class="qty-val" id="qty-chickenTikkaRoll">0</span>
+                                    <button class="qty-btn" onclick="addToCart('chickenTikkaRoll', 'Chicken Tikka
                             Roll', 189)">+</button>
-</div>
-</div>
-</div>
-</div>
-<span class="item-desc">Tender chicken marinated in yogurt &amp; spices, flame grilled.</span>
-</div>
-</div>
-<div class="item">
-<img alt="Shawarma Chicken" class="item-image" src="images/Doner chicken shawarma 1.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name"><span class="icon-indicator icon-nonveg"></span>Shawarma Chicken</span>
-<div class="price-action-group">
-<div class="item-price">199 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-shawarmaChicken" onclick="addToCart('shawarmaChicken', 'Shawarma Chicken', 199)">ADD</button>
-<div class="item-controls" id="controls-shawarmaChicken">
-<button class="qty-btn" onclick="removeFromCart('shawarmaChicken')">-</button>
-<span class="qty-val" id="qty-shawarmaChicken">0</span>
-<button class="qty-btn" onclick="addToCart('shawarmaChicken', 'Shawarma Chicken', 199)">+</button>
-</div>
-</div>
-</div>
-</div>
-<span class="item-desc">Middle-Eastern spiced chicken with signature garlic sauce.</span>
-</div>
-</div>
-<div class="item">
-<img alt="Falafel Roll" class="item-image" src="images/Chilli garlic roll.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name"><span class="icon-indicator icon-veg"></span>Falafel Roll</span>
-<div class="price-action-group">
-<div class="item-price">179 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-falafelRoll" onclick="addToCart('falafelRoll', 'Falafel Roll', 179)">ADD</button>
-<div class="item-controls" id="controls-falafelRoll">
-<button class="qty-btn" onclick="removeFromCart('falafelRoll')">-</button>
-<span class="qty-val" id="qty-falafelRoll">0</span>
-<button class="qty-btn" onclick="addToCart('falafelRoll', 'Falafel Roll', 179)">+</button>
-</div>
-</div>
-</div>
-</div>
-<span class="item-desc">Crispy chickpea patties with mint yogurt sauce and salad.</span>
-</div>
-</div>
-<div class="item">
-<img alt="Mutton Seekh Roll" class="item-image" src="images/Mutton seekh roll.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name"><span class="icon-indicator icon-nonveg"></span>Mutton Seekh Roll</span>
-<div class="price-action-group">
-<div class="item-price">229 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-muttonSeekhRoll" onclick="addToCart('muttonSeekhRoll', 'Mutton Seekh Roll', 229)">ADD</button>
-<div class="item-controls" id="controls-muttonSeekhRoll">
-<button class="qty-btn" onclick="removeFromCart('muttonSeekhRoll')">-</button>
-<span class="qty-val" id="qty-muttonSeekhRoll">0</span>
-<button class="qty-btn" onclick="addToCart('muttonSeekhRoll', 'Mutton Seekh Roll', 229)">+</button>
-</div>
-</div>
-</div>
-</div>
-<span class="item-desc">Juicy minced mutton seekh kebab with aromatic spices.</span>
-</div>
-</div>
-</div>
-<!-- Premium Rolls -->
-<div class="category-wrapper delay-2">
-<h2 class="category-title"><span>⭐</span> Premium Rolls</h2>
-<div class="item">
-<div class="badge-bestseller">BESTSELLER</div>
-<img alt="Butter Chicken Roll" class="item-image" src="images/Butter chicken roll.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name"><span class="icon-indicator icon-nonveg"></span>Butter Chicken
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="item-desc">Tender chicken marinated in yogurt &amp; spices, flame grilled.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Shawarma Chicken" class="item-image" src="images/Doner chicken shawarma 1.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name"><span class="icon-indicator icon-nonveg"></span>Shawarma Chicken</span>
+                        <div class="price-action-group">
+                            <div class="item-price">199 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-shawarmaChicken"
+                                    onclick="addToCart('shawarmaChicken', 'Shawarma Chicken', 199)">ADD</button>
+                                <div class="item-controls" id="controls-shawarmaChicken">
+                                    <button class="qty-btn" onclick="removeFromCart('shawarmaChicken')">-</button>
+                                    <span class="qty-val" id="qty-shawarmaChicken">0</span>
+                                    <button class="qty-btn"
+                                        onclick="addToCart('shawarmaChicken', 'Shawarma Chicken', 199)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="item-desc">Middle-Eastern spiced chicken with signature garlic sauce.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Falafel Roll" class="item-image" src="images/Chilli garlic roll.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name"><span class="icon-indicator icon-veg"></span>Falafel Roll</span>
+                        <div class="price-action-group">
+                            <div class="item-price">179 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-falafelRoll"
+                                    onclick="addToCart('falafelRoll', 'Falafel Roll', 179)">ADD</button>
+                                <div class="item-controls" id="controls-falafelRoll">
+                                    <button class="qty-btn" onclick="removeFromCart('falafelRoll')">-</button>
+                                    <span class="qty-val" id="qty-falafelRoll">0</span>
+                                    <button class="qty-btn"
+                                        onclick="addToCart('falafelRoll', 'Falafel Roll', 179)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="item-desc">Crispy chickpea patties with mint yogurt sauce and salad.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Mutton Seekh Roll" class="item-image" src="images/Mutton seekh roll.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name"><span class="icon-indicator icon-nonveg"></span>Mutton Seekh Roll</span>
+                        <div class="price-action-group">
+                            <div class="item-price">229 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-muttonSeekhRoll"
+                                    onclick="addToCart('muttonSeekhRoll', 'Mutton Seekh Roll', 229)">ADD</button>
+                                <div class="item-controls" id="controls-muttonSeekhRoll">
+                                    <button class="qty-btn" onclick="removeFromCart('muttonSeekhRoll')">-</button>
+                                    <span class="qty-val" id="qty-muttonSeekhRoll">0</span>
+                                    <button class="qty-btn"
+                                        onclick="addToCart('muttonSeekhRoll', 'Mutton Seekh Roll', 229)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="item-desc">Juicy minced mutton seekh kebab with aromatic spices.</span>
+                </div>
+            </div>
+        </div>
+        <!-- Premium Rolls -->
+        <div class="category-wrapper delay-2">
+            <h2 class="category-title"><span>⭐</span> Premium Rolls</h2>
+            <div class="item">
+                <div class="badge-bestseller">BESTSELLER</div>
+                <img alt="Butter Chicken Roll" class="item-image" src="images/Butter chicken roll.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name"><span class="icon-indicator icon-nonveg"></span>Butter Chicken
                             Roll</span>
-<div class="price-action-group">
-<div class="item-price">219 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-butterChickenRoll" onclick="addToCart('butterChickenRoll', 'Butter Chicken
+                        <div class="price-action-group">
+                            <div class="item-price">219 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-butterChickenRoll" onclick="addToCart('butterChickenRoll', 'Butter Chicken
                             Roll', 219)">ADD</button>
-<div class="item-controls" id="controls-butterChickenRoll">
-<button class="qty-btn" onclick="removeFromCart('butterChickenRoll')">-</button>
-<span class="qty-val" id="qty-butterChickenRoll">0</span>
-<button class="qty-btn" onclick="addToCart('butterChickenRoll', 'Butter Chicken
+                                <div class="item-controls" id="controls-butterChickenRoll">
+                                    <button class="qty-btn" onclick="removeFromCart('butterChickenRoll')">-</button>
+                                    <span class="qty-val" id="qty-butterChickenRoll">0</span>
+                                    <button class="qty-btn" onclick="addToCart('butterChickenRoll', 'Butter Chicken
                             Roll', 219)">+</button>
-</div>
-</div>
-</div>
-</div>
-<span class="item-desc">Tender chicken in rich, creamy tomato-butter gravy.</span>
-</div>
-</div>
-<div class="item">
-<img alt="Anda Butter Chicken" class="item-image" src="images/Bhuna chicken roll1.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name"><span class="icon-indicator icon-nonveg"></span>Anda Butter
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="item-desc">Tender chicken in rich, creamy tomato-butter gravy.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Anda Butter Chicken" class="item-image" src="images/Bhuna chicken roll1.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name"><span class="icon-indicator icon-nonveg"></span>Anda Butter
                             Chicken</span>
-<div class="price-action-group">
-<div class="item-price">229 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-andaButterChicken" onclick="addToCart('andaButterChicken', 'Anda Butter
+                        <div class="price-action-group">
+                            <div class="item-price">229 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-andaButterChicken" onclick="addToCart('andaButterChicken', 'Anda Butter
                             Chicken', 229)">ADD</button>
-<div class="item-controls" id="controls-andaButterChicken">
-<button class="qty-btn" onclick="removeFromCart('andaButterChicken')">-</button>
-<span class="qty-val" id="qty-andaButterChicken">0</span>
-<button class="qty-btn" onclick="addToCart('andaButterChicken', 'Anda Butter
+                                <div class="item-controls" id="controls-andaButterChicken">
+                                    <button class="qty-btn" onclick="removeFromCart('andaButterChicken')">-</button>
+                                    <span class="qty-val" id="qty-andaButterChicken">0</span>
+                                    <button class="qty-btn" onclick="addToCart('andaButterChicken', 'Anda Butter
                             Chicken', 229)">+</button>
-</div>
-</div>
-</div>
-</div>
-<span class="item-desc">Egg layered flatbread with our rich Butter Chicken filling.</span>
-</div>
-</div>
-<div class="item">
-<img alt="Malai Chicken Roll" class="item-image" src="images/Malai chicken roll.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name"><span class="icon-indicator icon-nonveg"></span>Malai Chicken
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="item-desc">Egg layered flatbread with our rich Butter Chicken filling.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Malai Chicken Roll" class="item-image" src="images/Malai chicken roll.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name"><span class="icon-indicator icon-nonveg"></span>Malai Chicken
                             Roll</span>
-<div class="price-action-group">
-<div class="item-price">209 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-malaiChickenRoll" onclick="addToCart('malaiChickenRoll', 'Malai Chicken
+                        <div class="price-action-group">
+                            <div class="item-price">209 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-malaiChickenRoll" onclick="addToCart('malaiChickenRoll', 'Malai Chicken
                             Roll', 209)">ADD</button>
-<div class="item-controls" id="controls-malaiChickenRoll">
-<button class="qty-btn" onclick="removeFromCart('malaiChickenRoll')">-</button>
-<span class="qty-val" id="qty-malaiChickenRoll">0</span>
-<button class="qty-btn" onclick="addToCart('malaiChickenRoll', 'Malai Chicken
+                                <div class="item-controls" id="controls-malaiChickenRoll">
+                                    <button class="qty-btn" onclick="removeFromCart('malaiChickenRoll')">-</button>
+                                    <span class="qty-val" id="qty-malaiChickenRoll">0</span>
+                                    <button class="qty-btn" onclick="addToCart('malaiChickenRoll', 'Malai Chicken
                             Roll', 209)">+</button>
-</div>
-</div>
-</div>
-</div>
-<span class="item-desc">Juicy chicken in fresh cream &amp; mild spices. A delightful treat.</span>
-</div>
-</div>
-</div>
-<!-- Pita Rolls -->
-<div class="category-wrapper delay-3">
-<h2 class="category-title"><span>🫓</span> Pita Rolls (Thai Special)</h2>
-<div class="item">
-<img alt="Pita Shawarma Chicken" class="item-image" src="images/Doner chicken shawarma 1.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name">Pita Shawarma Chicken</span>
-<div class="price-action-group">
-<div class="item-price">199 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-pitaShawarmaChicken" onclick="addToCart('pitaShawarmaChicken', 'Pita Shawarma Chicken', 199)">ADD</button>
-<div class="item-controls" id="controls-pitaShawarmaChicken">
-<button class="qty-btn" onclick="removeFromCart('pitaShawarmaChicken')">-</button>
-<span class="qty-val" id="qty-pitaShawarmaChicken">0</span>
-<button class="qty-btn" onclick="addToCart('pitaShawarmaChicken', 'Pita Shawarma Chicken', 199)">+</button>
-</div>
-</div>
-</div>
-</div>
-<span class="item-desc">Soft pita with spiced chicken, crisp veggies &amp; garlic sauce.</span>
-</div>
-</div>
-<div class="item">
-<img alt="Pita Falafel Roll" class="item-image" src="images/Doner paneer shwarma.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name">Pita Falafel Roll</span>
-<div class="price-action-group">
-<div class="item-price">179 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-pitaFalafelRoll" onclick="addToCart('pitaFalafelRoll', 'Pita Falafel Roll', 179)">ADD</button>
-<div class="item-controls" id="controls-pitaFalafelRoll">
-<button class="qty-btn" onclick="removeFromCart('pitaFalafelRoll')">-</button>
-<span class="qty-val" id="qty-pitaFalafelRoll">0</span>
-<button class="qty-btn" onclick="addToCart('pitaFalafelRoll', 'Pita Falafel Roll', 179)">+</button>
-</div>
-</div>
-</div>
-</div>
-<span class="item-desc">Warm pita with crispy falafel, lettuce &amp; mint yogurt.</span>
-</div>
-</div>
-</div>
-<!-- Fries & Bites -->
-<div class="category-wrapper delay-4">
-<h2 class="category-title"><span>🍟</span> Fries &amp; Bites</h2>
-<div class="item">
-<img alt="Classic French Fries" class="item-image" src="images/classic salted fries.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name">Classic French Fries</span>
-<div class="price-action-group">
-<div class="item-price">79 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-classicFrenchFries" onclick="addToCart('classicFrenchFries', 'Classic French Fries', 79)">ADD</button>
-<div class="item-controls" id="controls-classicFrenchFries">
-<button class="qty-btn" onclick="removeFromCart('classicFrenchFries')">-</button>
-<span class="qty-val" id="qty-classicFrenchFries">0</span>
-<button class="qty-btn" onclick="addToCart('classicFrenchFries', 'Classic French Fries', 79)">+</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="item">
-<img alt="Masala Fries" class="item-image" src="images/fiery masala fries.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name">Masala Fries</span>
-<div class="price-action-group">
-<div class="item-price">89 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-masalaFries" onclick="addToCart('masalaFries', 'Masala Fries', 89)">ADD</button>
-<div class="item-controls" id="controls-masalaFries">
-<button class="qty-btn" onclick="removeFromCart('masalaFries')">-</button>
-<span class="qty-val" id="qty-masalaFries">0</span>
-<button class="qty-btn" onclick="addToCart('masalaFries', 'Masala Fries', 89)">+</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="item">
-<img alt="Chicken Nuggets" class="item-image" src="https://placehold.co/100x100?text=Nuggets"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name">Chicken Nuggets</span>
-<div class="price-action-group">
-<div class="item-price">99 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-chickenNuggets" onclick="addToCart('chickenNuggets', 'Chicken Nuggets', 99)">ADD</button>
-<div class="item-controls" id="controls-chickenNuggets">
-<button class="qty-btn" onclick="removeFromCart('chickenNuggets')">-</button>
-<span class="qty-val" id="qty-chickenNuggets">0</span>
-<button class="qty-btn" onclick="addToCart('chickenNuggets', 'Chicken Nuggets', 99)">+</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="item">
-<img alt="Cheese Balls" class="item-image" src="https://placehold.co/100x100?text=Cheese"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name">Cheese Balls</span>
-<div class="price-action-group">
-<div class="item-price">99 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-cheeseBalls" onclick="addToCart('cheeseBalls', 'Cheese Balls', 99)">ADD</button>
-<div class="item-controls" id="controls-cheeseBalls">
-<button class="qty-btn" onclick="removeFromCart('cheeseBalls')">-</button>
-<span class="qty-val" id="qty-cheeseBalls">0</span>
-<button class="qty-btn" onclick="addToCart('cheeseBalls', 'Cheese Balls', 99)">+</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Sliders -->
-<div class="category-wrapper delay-4">
-<h2 class="category-title"><span>🍔</span> Sliders</h2>
-<div class="item">
-<img alt="Fish Finger Slider" class="item-image" src="https://placehold.co/100x100?text=Slider"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name">Fish Finger Slider</span>
-<div class="price-action-group">
-<div class="item-price">129 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-fishFingerSlider" onclick="addToCart('fishFingerSlider', 'Fish Finger Slider', 129)">ADD</button>
-<div class="item-controls" id="controls-fishFingerSlider">
-<button class="qty-btn" onclick="removeFromCart('fishFingerSlider')">-</button>
-<span class="qty-val" id="qty-fishFingerSlider">0</span>
-<button class="qty-btn" onclick="addToCart('fishFingerSlider', 'Fish Finger Slider', 129)">+</button>
-</div>
-</div>
-</div>
-</div>
-<span class="item-desc">Crispy fish fingers in a soft bun with tangy tartar sauce.</span>
-</div>
-</div>
-</div>
-<!-- Drinks -->
-<div class="category-wrapper delay-5">
-<h2 class="category-title"><span>🍺</span> Drinks</h2>
-<div class="item">
-<img alt="Fresh Juice" class="item-image" src="images/masala lemonade.jpg"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name">Fresh Orange / Mango Juice</span>
-<div class="price-action-group">
-<div class="item-price">79 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-freshOrangeMangoJuice" onclick="addToCart('freshOrangeMangoJuice', 'Fresh Orange / Mango Juice', 79)">ADD</button>
-<div class="item-controls" id="controls-freshOrangeMangoJuice">
-<button class="qty-btn" onclick="removeFromCart('freshOrangeMangoJuice')">-</button>
-<span class="qty-val" id="qty-freshOrangeMangoJuice">0</span>
-<button class="qty-btn" onclick="addToCart('freshOrangeMangoJuice', 'Fresh Orange / Mango Juice', 79)">+</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="item">
-<img alt="Beer" class="item-image" src="https://placehold.co/100x100?text=Beer"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name">Chang / Singha Beer</span>
-<div class="price-action-group">
-<div class="item-price">99 ฿</div>
-<div class="action-box">
-<button class="add-btn" id="btn-add-changSinghaBeer" onclick="addToCart('changSinghaBeer', 'Chang / Singha Beer', 99)">ADD</button>
-<div class="item-controls" id="controls-changSinghaBeer">
-<button class="qty-btn" onclick="removeFromCart('changSinghaBeer')">-</button>
-<span class="qty-val" id="qty-changSinghaBeer">0</span>
-<button class="qty-btn" onclick="addToCart('changSinghaBeer', 'Chang / Singha Beer', 99)">+</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Best Combos -->
-<div class="category-wrapper delay-5">
-<h2 class="category-title"><span>🔥</span> Best Combos</h2>
-<div class="item" style="border: 1px solid var(--primary); background: rgba(255, 107, 53, 0.05);">
-<img alt="Combo 1" class="item-image" src="https://placehold.co/100x100?text=Combo+1"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name" style="color: var(--primary);">Combo 1: Roll &amp; Refresh</span>
-<div class="item-price">259 ฿</div>
-</div>
-<span class="item-desc">Any Roll + Fries + Fresh Juice. The perfect meal.</span>
-</div>
-</div>
-<div class="item" style="border: 1px solid var(--primary); background: rgba(255, 107, 53, 0.05);">
-<img alt="Combo 2" class="item-image" src="https://placehold.co/100x100?text=Combo+2"/>
-<div class="item-details">
-<div class="item-row">
-<span class="item-name" style="color: var(--primary);">Combo 2: Roll &amp; Chill</span>
-<div class="item-price">309 ฿</div>
-</div>
-<span class="item-desc">Any Roll + Fries + Beer. Good times guaranteed.</span>
-</div>
-</div>
-</div>
-<div class="note">
-<p>Prices are in THB. Service charge may apply.</p>
-</div>
-</div>
-<!-- WhatsApp Button -->
-<a class="whatsapp-btn" href="https://wa.me/919205159696" target="_blank">
-<svg fill="currentColor" viewbox="0 0 24 24">
-<path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.654-.698c.99.54 2.112.835 3.198.835l.001-.001c3.182 0 5.769-2.587 5.769-5.767s-2.587-5.766-5.767-5.766zm-4.706 8.35c.571 1.107 1.766 2.016 4.706 2.016 2.94 0 4.145-.919 4.706-2.016.27-.52.27-1.12.27-1.637 0-2.885-2.228-5.113-5.01-5.113-2.782 0-5.048 2.164-5.048 5.113 0 .584.053 1.18.27 1.637z"></path>
-</svg>
-</a>
-<!-- Floating Cart Bar -->
-<div class="cart-bar" id="cart-bar">
-<div class="cart-info">
-<span id="cart-count">0 Items</span>
-<span class="cart-dot">·</span>
-<span id="cart-total">0 ฿</span>
-</div>
-<div class="cart-actions">
-<button class="btn-view-cart" onclick="viewCart()">View Cart</button>
-</div>
-</div>
-<!-- Cart Modal -->
-<div class="cart-modal" id="cart-modal">
-<div class="cart-modal-content">
-<div class="cart-header">
-<h2>Your Order</h2>
-<span class="close-modal" onclick="closeCart()">×</span>
-</div>
-<div class="cart-items-list" id="cart-items">
-<!-- Items will be injected here -->
-<p class="empty-msg">Your cart is empty.</p>
-</div>
-<div class="cart-footer">
-<div class="cart-total-row">
-<span>Grand Total</span>
-<span id="modal-total">0 ฿</span>
-</div>
-<button class="btn-checkout-full" onclick="checkout()">Order on WhatsApp</button>
-</div>
-</div>
-</div>
-<script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="item-desc">Juicy chicken in fresh cream &amp; mild spices. A delightful treat.</span>
+                </div>
+            </div>
+        </div>
+        <!-- Pita Rolls -->
+        <div class="category-wrapper delay-3">
+            <h2 class="category-title"><span>🫓</span> Pita Rolls (Thai Special)</h2>
+            <div class="item">
+                <img alt="Pita Shawarma Chicken" class="item-image" src="images/Doner chicken shawarma 1.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name">Pita Shawarma Chicken</span>
+                        <div class="price-action-group">
+                            <div class="item-price">199 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-pitaShawarmaChicken"
+                                    onclick="addToCart('pitaShawarmaChicken', 'Pita Shawarma Chicken', 199)">ADD</button>
+                                <div class="item-controls" id="controls-pitaShawarmaChicken">
+                                    <button class="qty-btn" onclick="removeFromCart('pitaShawarmaChicken')">-</button>
+                                    <span class="qty-val" id="qty-pitaShawarmaChicken">0</span>
+                                    <button class="qty-btn"
+                                        onclick="addToCart('pitaShawarmaChicken', 'Pita Shawarma Chicken', 199)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="item-desc">Soft pita with spiced chicken, crisp veggies &amp; garlic sauce.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Pita Falafel Roll" class="item-image" src="images/Doner paneer shwarma.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name">Pita Falafel Roll</span>
+                        <div class="price-action-group">
+                            <div class="item-price">179 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-pitaFalafelRoll"
+                                    onclick="addToCart('pitaFalafelRoll', 'Pita Falafel Roll', 179)">ADD</button>
+                                <div class="item-controls" id="controls-pitaFalafelRoll">
+                                    <button class="qty-btn" onclick="removeFromCart('pitaFalafelRoll')">-</button>
+                                    <span class="qty-val" id="qty-pitaFalafelRoll">0</span>
+                                    <button class="qty-btn"
+                                        onclick="addToCart('pitaFalafelRoll', 'Pita Falafel Roll', 179)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="item-desc">Warm pita with crispy falafel, lettuce &amp; mint yogurt.</span>
+                </div>
+            </div>
+        </div>
+        <!-- Fries & Bites -->
+        <div class="category-wrapper delay-4">
+            <h2 class="category-title"><span>🍟</span> Fries &amp; Bites</h2>
+            <div class="item">
+                <img alt="Classic French Fries" class="item-image" src="images/classic salted fries.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name">Classic French Fries</span>
+                        <div class="price-action-group">
+                            <div class="item-price">79 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-classicFrenchFries"
+                                    onclick="addToCart('classicFrenchFries', 'Classic French Fries', 79)">ADD</button>
+                                <div class="item-controls" id="controls-classicFrenchFries">
+                                    <button class="qty-btn" onclick="removeFromCart('classicFrenchFries')">-</button>
+                                    <span class="qty-val" id="qty-classicFrenchFries">0</span>
+                                    <button class="qty-btn"
+                                        onclick="addToCart('classicFrenchFries', 'Classic French Fries', 79)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Masala Fries" class="item-image" src="images/fiery masala fries.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name">Masala Fries</span>
+                        <div class="price-action-group">
+                            <div class="item-price">89 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-masalaFries"
+                                    onclick="addToCart('masalaFries', 'Masala Fries', 89)">ADD</button>
+                                <div class="item-controls" id="controls-masalaFries">
+                                    <button class="qty-btn" onclick="removeFromCart('masalaFries')">-</button>
+                                    <span class="qty-val" id="qty-masalaFries">0</span>
+                                    <button class="qty-btn"
+                                        onclick="addToCart('masalaFries', 'Masala Fries', 89)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Chicken Nuggets" class="item-image" src="https://placehold.co/100x100?text=Nuggets" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name">Chicken Nuggets</span>
+                        <div class="price-action-group">
+                            <div class="item-price">99 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-chickenNuggets"
+                                    onclick="addToCart('chickenNuggets', 'Chicken Nuggets', 99)">ADD</button>
+                                <div class="item-controls" id="controls-chickenNuggets">
+                                    <button class="qty-btn" onclick="removeFromCart('chickenNuggets')">-</button>
+                                    <span class="qty-val" id="qty-chickenNuggets">0</span>
+                                    <button class="qty-btn"
+                                        onclick="addToCart('chickenNuggets', 'Chicken Nuggets', 99)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Cheese Balls" class="item-image" src="https://placehold.co/100x100?text=Cheese" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name">Cheese Balls</span>
+                        <div class="price-action-group">
+                            <div class="item-price">99 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-cheeseBalls"
+                                    onclick="addToCart('cheeseBalls', 'Cheese Balls', 99)">ADD</button>
+                                <div class="item-controls" id="controls-cheeseBalls">
+                                    <button class="qty-btn" onclick="removeFromCart('cheeseBalls')">-</button>
+                                    <span class="qty-val" id="qty-cheeseBalls">0</span>
+                                    <button class="qty-btn"
+                                        onclick="addToCart('cheeseBalls', 'Cheese Balls', 99)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sliders -->
+        <div class="category-wrapper delay-4">
+            <h2 class="category-title"><span>🍔</span> Sliders</h2>
+            <div class="item">
+                <img alt="Fish Finger Slider" class="item-image" src="https://placehold.co/100x100?text=Slider" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name">Fish Finger Slider</span>
+                        <div class="price-action-group">
+                            <div class="item-price">129 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-fishFingerSlider"
+                                    onclick="addToCart('fishFingerSlider', 'Fish Finger Slider', 129)">ADD</button>
+                                <div class="item-controls" id="controls-fishFingerSlider">
+                                    <button class="qty-btn" onclick="removeFromCart('fishFingerSlider')">-</button>
+                                    <span class="qty-val" id="qty-fishFingerSlider">0</span>
+                                    <button class="qty-btn"
+                                        onclick="addToCart('fishFingerSlider', 'Fish Finger Slider', 129)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="item-desc">Crispy fish fingers in a soft bun with tangy tartar sauce.</span>
+                </div>
+            </div>
+        </div>
+        <!-- Drinks -->
+        <div class="category-wrapper delay-5">
+            <h2 class="category-title"><span>🍺</span> Drinks</h2>
+            <div class="item">
+                <img alt="Fresh Juice" class="item-image" src="images/masala lemonade.jpg" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name">Fresh Orange / Mango Juice</span>
+                        <div class="price-action-group">
+                            <div class="item-price">79 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-freshOrangeMangoJuice"
+                                    onclick="addToCart('freshOrangeMangoJuice', 'Fresh Orange / Mango Juice', 79)">ADD</button>
+                                <div class="item-controls" id="controls-freshOrangeMangoJuice">
+                                    <button class="qty-btn" onclick="removeFromCart('freshOrangeMangoJuice')">-</button>
+                                    <span class="qty-val" id="qty-freshOrangeMangoJuice">0</span>
+                                    <button class="qty-btn"
+                                        onclick="addToCart('freshOrangeMangoJuice', 'Fresh Orange / Mango Juice', 79)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Beer" class="item-image" src="https://placehold.co/100x100?text=Beer" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name">Chang / Singha Beer</span>
+                        <div class="price-action-group">
+                            <div class="item-price">99 ฿</div>
+                            <div class="action-box">
+                                <button class="add-btn" id="btn-add-changSinghaBeer"
+                                    onclick="addToCart('changSinghaBeer', 'Chang / Singha Beer', 99)">ADD</button>
+                                <div class="item-controls" id="controls-changSinghaBeer">
+                                    <button class="qty-btn" onclick="removeFromCart('changSinghaBeer')">-</button>
+                                    <span class="qty-val" id="qty-changSinghaBeer">0</span>
+                                    <button class="qty-btn"
+                                        onclick="addToCart('changSinghaBeer', 'Chang / Singha Beer', 99)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Best Combos -->
+        <div class="category-wrapper delay-5">
+            <h2 class="category-title"><span>🔥</span> Best Combos</h2>
+            <div class="item" style="border: 1px solid var(--primary); background: rgba(255, 107, 53, 0.05);">
+                <img alt="Combo 1" class="item-image" src="https://placehold.co/100x100?text=Combo+1" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name" style="color: var(--primary);">Combo 1: Roll &amp; Refresh</span>
+                        <div class="item-price">259 ฿</div>
+                    </div>
+                    <span class="item-desc">Any Roll + Fries + Fresh Juice. The perfect meal.</span>
+                </div>
+            </div>
+            <div class="item" style="border: 1px solid var(--primary); background: rgba(255, 107, 53, 0.05);">
+                <img alt="Combo 2" class="item-image" src="https://placehold.co/100x100?text=Combo+2" />
+                <div class="item-details">
+                    <div class="item-row">
+                        <span class="item-name" style="color: var(--primary);">Combo 2: Roll &amp; Chill</span>
+                        <div class="item-price">309 ฿</div>
+                    </div>
+                    <span class="item-desc">Any Roll + Fries + Beer. Good times guaranteed.</span>
+                </div>
+            </div>
+        </div>
+        <div class="note">
+            <p>Prices are in THB. Service charge may apply.</p>
+        </div>
+    </div>
+    <!-- WhatsApp Button -->
+    <a class="whatsapp-btn" href="https://wa.me/919205159696" target="_blank">
+        <svg fill="currentColor" viewbox="0 0 24 24">
+            <path
+                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.654-.698c.99.54 2.112.835 3.198.835l.001-.001c3.182 0 5.769-2.587 5.769-5.767s-2.587-5.766-5.767-5.766zm-4.706 8.35c.571 1.107 1.766 2.016 4.706 2.016 2.94 0 4.145-.919 4.706-2.016.27-.52.27-1.12.27-1.637 0-2.885-2.228-5.113-5.01-5.113-2.782 0-5.048 2.164-5.048 5.113 0 .584.053 1.18.27 1.637z">
+            </path>
+        </svg>
+    </a>
+    <!-- Customization Modal -->
+    <div id="custom-modal" class="custom-modal">
+        <div class="custom-content">
+            <div class="custom-header">
+                <div>
+                    <h2 id="custom-item-name">Item Name</h2>
+                    <p id="custom-item-price" class="custom-price">100 ฿</p>
+                </div>
+                <span class="close-custom" onclick="closeCustom()">&times;</span>
+            </div>
+
+            <div class="custom-body">
+                <!-- Base Selection -->
+                <div id="section-base" class="custom-section">
+                    <h3>Choose Base</h3>
+                    <div class="options-grid" id="base-options">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Extras -->
+                <div id="section-extras" class="custom-section">
+                    <h3>Add-ons</h3>
+                    <div class="options-grid" id="extra-options">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-footer">
+                <button onclick="addToCartFromCustom()" class="btn-add-custom">
+                    Add to Cart - <span id="custom-total-btn">100 ฿</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // --- Data: Modifiers ---
+        // Using "Rolls" category logic or generic logic. 
+        // For simplicity, we apply "Roll Base" to any item with "Roll" in ID or Name.
+
+        const modifiersData = {
+            base: [
+                { id: 'paratha', name: 'Malabar Paratha', price: 0, img: 'https://placehold.co/80x80?text=Paratha' },
+                { id: 'wheat', name: 'Whole Wheat', price: 10, img: 'https://placehold.co/80x80?text=Wheat' }
+            ],
+            extras: [
+                { id: 'cheese', name: 'Cheese Slice', price: 20, img: 'https://placehold.co/80x80?text=Cheese' },
+                { id: 'egg', name: 'Extra Egg', price: 15, img: 'https://images.unsplash.com/photo-1587486913049-53fc88980cfc?w=100&h=100&fit=crop' },
+                { id: 'mayo', name: 'Extra Mayo', price: 10, img: 'https://placehold.co/80x80?text=Mayo' },
+                { id: 'spicy', name: 'Spicy Sauce', price: 5, img: 'https://placehold.co/80x100?text=Spicy' }
+            ]
+        };
+
+        // --- State ---
         let cart = {};
+        // Cart Key Structure: "itemId" (simple) OR "itemId|baseId|extra1,extra2"
+
+        let currentCustomItem = null;
+        let selectedBase = null;
+        let selectedExtras = [];
+
+        // --- Functions ---
 
         function addToCart(id, name, price) {
-            if (!cart[id]) {
-                cart[id] = { name: name, price: price, qty: 0 };
+            // Check if item needs customization
+            // Heuristic: If name contains "Roll", invoke customizer.
+            // Or we could have a specific flag. Let's use "Roll" keyword logic for now as requested.
+
+            const isCustomizable = name.toLowerCase().includes('roll') && !name.toLowerCase().includes('combo');
+
+            if (isCustomizable) {
+                openCustomizer(id, name, price);
+            } else {
+                // Simple Add
+                addItemToCartState(id, name, price, null, id);
             }
-            cart[id].qty++;
+        }
+
+        function openCustomizer(id, name, price) {
+            currentCustomItem = { id, name, basePrice: price };
+            selectedBase = modifiersData.base[0]; // Default first base
+            selectedExtras = [];
+
+            document.getElementById('custom-item-name').innerText = name;
+            document.getElementById('custom-item-price').innerText = `${price} ฿`;
+
+            renderCustomOptions();
+            updateCustomTotal();
+
+            document.getElementById('custom-modal').style.display = 'flex';
+        }
+
+        function renderCustomOptions() {
+            // Render Base
+            const baseContainer = document.getElementById('base-options');
+            baseContainer.innerHTML = '';
+            modifiersData.base.forEach(opt => {
+                const isSelected = selectedBase.id === opt.id;
+                baseContainer.innerHTML += `
+                    <div class="option-card ${isSelected ? 'selected' : ''}" onclick="selectBase('${opt.id}')">
+                        <img src="${opt.img}" alt="${opt.name}">
+                        <div class="opt-name">${opt.name}</div>
+                        <div class="opt-price">${opt.price > 0 ? '+' + opt.price + '฿' : 'Free'}</div>
+                    </div>
+                `;
+            });
+
+            // Render Extras
+            const extraContainer = document.getElementById('extra-options');
+            extraContainer.innerHTML = '';
+            modifiersData.extras.forEach(opt => {
+                const isSelected = selectedExtras.some(e => e.id === opt.id);
+                extraContainer.innerHTML += `
+                    <div class="option-card ${isSelected ? 'selected' : ''}" onclick="toggleExtra('${opt.id}')">
+                        <img src="${opt.img}" alt="${opt.name}">
+                        <div class="opt-name">${opt.name}</div>
+                        <div class="opt-price">+${opt.price}฿</div>
+                    </div>
+                `;
+            });
+        }
+
+        function selectBase(id) {
+            selectedBase = modifiersData.base.find(b => b.id === id);
+            renderCustomOptions();
+            updateCustomTotal();
+        }
+
+        function toggleExtra(id) {
+            const index = selectedExtras.findIndex(e => e.id === id);
+            if (index > -1) {
+                selectedExtras.splice(index, 1);
+            } else {
+                selectedExtras.push(modifiersData.extras.find(e => e.id === id));
+            }
+            renderCustomOptions();
+            updateCustomTotal();
+        }
+
+        function updateCustomTotal() {
+            let total = currentCustomItem.basePrice;
+            if (selectedBase) total += selectedBase.price;
+            selectedExtras.forEach(e => total += e.price);
+
+            document.getElementById('custom-total-btn').innerText = `${total} ฿`;
+        }
+
+        function closeCustom() {
+            document.getElementById('custom-modal').style.display = 'none';
+        }
+
+        function addToCartFromCustom() {
+            // Generate unique Key
+            // Sort extras to handle permutations consistently
+            const extraIds = selectedExtras.map(e => e.id).sort().join(',');
+            const compositeKey = `${currentCustomItem.id}|${selectedBase.id}|${extraIds}`;
+
+            // Calculate final price per unit
+            let unitPrice = currentCustomItem.basePrice + selectedBase.price;
+            selectedExtras.forEach(e => unitPrice += e.price);
+
+            // Create descriptive name for cart
+            let descName = currentCustomItem.name;
+            // storing details for display
+            const details = {
+                baseName: selectedBase.name,
+                extrasNames: selectedExtras.map(e => e.name)
+            };
+
+            addItemToCartState(compositeKey, descName, unitPrice, details, currentCustomItem.id);
+            closeCustom();
+        }
+
+        // Core Cart Logic
+        function addItemToCartState(key, name, price, details, parentId) {
+            if (!cart[key]) {
+                cart[key] = {
+                    name: name,
+                    price: price,
+                    qty: 0,
+                    details: details, // { baseName, extrasNames[] } or null/empty
+                    parentId: parentId || key // Used to update the main page Counter
+                };
+            }
+            cart[key].qty++;
             updateUI();
         }
 
-        function removeFromCart(id) {
-            if (cart[id] && cart[id].qty > 0) {
-                cart[id].qty--;
-                if (cart[id].qty === 0) {
-                    delete cart[id];
+        function removeFromCart(key) {
+            // key might be complex or simple
+            if (cart[key] && cart[key].qty > 0) {
+                cart[key].qty--;
+                if (cart[key].qty === 0) {
+                    delete cart[key];
                 }
                 updateUI();
             }
         }
 
+        // UI Updates
         function updateUI() {
             let totalQty = 0;
             let totalPrice = 0;
 
-            // Update item counters
-            for (let id in cart) {
-                const qtyEl = document.getElementById(`qty-${id}`);
-                const btnAdd = document.getElementById(`btn-add-${id}`);
-                const controls = document.getElementById(`controls-${id}`);
+            // Reset all counters on page first (naive approach for simplicity)
+            // Or better: map cart items back to their parent IDs using the parentId field
 
-                if (qtyEl) {
-                    qtyEl.innerText = cart[id].qty;
-                    if (cart[id].qty > 0) {
-                        if (btnAdd) btnAdd.style.display = 'none';
-                        if (controls) controls.style.display = 'flex';
-                    }
-                }
-                totalQty += cart[id].qty;
-                totalPrice += cart[id].qty * cart[id].price;
+            const counts = {}; // parentId -> totalQty
+
+            for (let k in cart) {
+                const item = cart[k];
+                const cleanParentId = item.parentId;
+
+                if (!counts[cleanParentId]) counts[cleanParentId] = 0;
+                counts[cleanParentId] += item.qty;
+
+                totalQty += item.qty;
+                totalPrice += item.qty * item.price;
             }
-            
-            // Handle items removed (reset UI for items not in cart)
-             document.querySelectorAll('.item-controls').forEach(el => {
-                const id = el.id.replace('controls-', '');
-                if (!cart[id]) {
-                    const btnAdd = document.getElementById(`btn-add-${id}`);
-                    if(btnAdd) btnAdd.style.display = 'block';
-                    el.style.display = 'none';
-                }
-            });
 
+            // Update DOM counters
+            // We iterate over all controls we know exist? 
+            // Or just iterate the counts we found.
+            // Problem: If count goes to 0, it won't be in loop.
+            // Solution: We need to clear previous state or assume 0 unless set.
+
+            // Getting all Qty Val spans to reset 0
+            document.querySelectorAll('.qty-val').forEach(el => el.innerText = '0');
+            document.querySelectorAll('.item-controls').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.add-btn').forEach(el => el.style.display = 'block');
+
+            for (let pid in counts) {
+                const qty = counts[pid];
+                if (qty > 0) {
+                    const qtyEl = document.getElementById(`qty-${pid}`);
+                    const btnAdd = document.getElementById(`btn-add-${pid}`);
+                    const controls = document.getElementById(`controls-${pid}`);
+
+                    if (qtyEl) qtyEl.innerText = qty;
+                    if (btnAdd) btnAdd.style.display = 'none';
+                    if (controls) controls.style.display = 'flex';
+                }
+            }
+
+            // Cart Bar
             document.getElementById('cart-count').innerText = `${totalQty} Item${totalQty !== 1 ? 's' : ''}`;
             document.getElementById('cart-total').innerText = `${totalPrice} ฿`;
             document.getElementById('modal-total').innerText = `${totalPrice} ฿`;
@@ -1025,52 +1231,83 @@
             }
         }
 
+        // View Cart Modal
         function viewCart() {
-            const modal = document.getElementById('cart-modal');
             const list = document.getElementById('cart-items');
             list.innerHTML = '';
 
-            let hasItems = false;
-            for (let id in cart) {
-                hasItems = true;
-                const item = cart[id];
+            if (Object.keys(cart).length === 0) {
+                list.innerHTML = '<p class="empty-msg">Your cart is empty.</p>';
+                document.getElementById('cart-modal').style.display = 'flex';
+                return;
+            }
+
+            for (let key in cart) {
+                const item = cart[key];
+
+                // Format details
+                let detailsHTML = '';
+                if (item.details && (item.details.baseName || (item.details.extrasNames && item.details.extrasNames.length > 0))) {
+                    detailsHTML = '<div class="cart-item-details">';
+                    if (item.details.baseName) detailsHTML += `<span>Base: ${item.details.baseName}</span>`;
+                    if (item.details.extrasNames && item.details.extrasNames.length > 0) {
+                        detailsHTML += `<span>+ ${item.details.extrasNames.join(', ')}</span>`;
+                    }
+                    detailsHTML += '</div>';
+                }
+
                 list.innerHTML += `
                     <div class="cart-item-row">
                         <div class="cart-item-info">
                             <span class="cart-item-name">${item.name}</span>
+                            ${detailsHTML}
                             <span class="cart-item-price">${item.price} ฿</span>
                         </div>
                         <div class="cart-item-controls">
-                            <button onclick="removeFromCart('${id}'); viewCart()" class="btn-micro">-</button>
+                            <button onclick="removeFromCart('${key}'); viewCart()" class="btn-micro">-</button>
                             <span>${item.qty}</span>
-                            <button onclick="addToCart('${id}', '${item.name}', ${item.price}); viewCart()" class="btn-micro">+</button>
+                            <button onclick="incrementItem('${key}')" class="btn-micro">+</button> 
                         </div>
                     </div>
                 `;
             }
 
-            if (!hasItems) {
-                list.innerHTML = '<p class="empty-msg">Your cart is empty.</p>';
-            }
+            // Simple helper for direct increment
+            window.incrementItem = function (key) {
+                if (cart[key]) {
+                    cart[key].qty++;
+                    updateUI();
+                    viewCart();
+                }
+            };
 
-            modal.style.display = 'flex';
+            // Finalize modal open
+            document.getElementById('cart-modal').style.display = 'flex';
         }
 
-        function closeCart() {
-            document.getElementById('cart-modal').style.display = 'none';
-        }
-
+        // Final Checkout
         function checkout() {
-            let message = "Hi, I would like to order from *Baap of Rolls*:\n\n";
+            let message = "Hi, I would like to order from *Baap of Rolls*:\\n\\n";
             let total = 0;
             let hasItems = false;
 
-            for (let id in cart) {
+            for (let key in cart) {
                 hasItems = true;
-                const item = cart[id];
+                const item = cart[key];
                 const itemTotal = item.qty * item.price;
                 total += itemTotal;
-                message += `${item.qty} x ${item.name} (${itemTotal} ฿)\n`;
+
+                message += `${item.qty} x ${item.name} (${itemTotal} ฿)\\n`;
+
+                if (item.details) {
+                    if (item.details.baseName) message += `   - Base: ${item.details.baseName}\\n`;
+                    if (item.details.extrasNames && item.details.extrasNames.length > 0) {
+                        item.details.extrasNames.forEach(ex => {
+                            message += `   - + ${ex}\\n`;
+                        });
+                    }
+                }
+                message += "\\n";
             }
 
             if (!hasItems) {
@@ -1078,79 +1315,16 @@
                 return;
             }
 
-            message += `\n*Total Order Value: ${total} ฿*`;
-            
-            // Encode and open WhatsApp
-            const phone = "919205159696"; 
+            message += `*Total Order Value: ${total} ฿*`;
+
+            const phone = "919205159696";
             const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
             window.open(url, '_blank');
         }
     </script>
-<style>
-        /* Cart & Action Styles */
-        .price-action-group {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 5px;
-        }
-        
-        .action-box {
-            display: flex;
-            align-items: center;
-        }
 
-        .add-btn {
-            background: var(--bg-card);
-            border: 1px solid var(--primary);
-            color: var(--primary);
-            padding: 5px 15px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 0.8rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        
-        .add-btn:active {
-            transform: scale(0.95);
-        }
-
-        .item-controls {
-            display: none;
-            align-items: center;
-            background: var(--bg-card);
-            border: 1px solid var(--primary);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
-        .qty-btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            width: 28px;
-            height: 28px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            cursor: pointer;
-            display: flex; justify-content: center; align-items: center;
-        }
-        
-        .qty-val {
-            min-width: 25px;
-            text-align: center;
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: var(--text-main);
-            padding: 0 5px;
-        }
-
-        /* Cart Bar */
+    <style>
+        /* [Previous styles kept, adding Custom Modal CSS] */
         .cart-bar {
             position: fixed;
             bottom: 20px;
@@ -1166,22 +1340,32 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             z-index: 1000;
             transition: transform 0.3s ease-out;
         }
-        
+
         .cart-bar.visible {
             transform: translateX(-50%) translateY(0);
         }
 
         .cart-info {
-            display: flex; flex-direction: column;
+            display: flex;
+            flex-direction: column;
             font-size: 0.9rem;
         }
-        
-        #cart-count { color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; }
-        #cart-total { color: var(--text-main); font-weight: 700; font-size: 1.1rem; }
+
+        #cart-count {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        #cart-total {
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
 
         .btn-view-cart {
             background: var(--primary);
@@ -1192,48 +1376,325 @@
             font-weight: 600;
             cursor: pointer;
         }
-        
-        /* Modal */
-        .cart-modal {
+
+        /* Modal General */
+        .cart-modal,
+        .custom-modal {
             display: none;
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.8);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
             z-index: 2000;
             justify-content: center;
-            align-items: flex-end; /* Bottom sheet on mobile */
-        }
-        
-        @media(min-width: 600px) {
-            .cart-modal { align-items: center; }
-            .cart-modal-content { border-radius: 20px; max-width: 450px; }
+            align-items: flex-end;
+            backdrop-filter: blur(5px);
         }
 
-        .cart-modal-content {
-            background: #1a1a1a;
+        @media(min-width: 600px) {
+
+            .cart-modal,
+            .custom-modal {
+                align-items: center;
+            }
+
+            .cart-modal-content,
+            .custom-content {
+                border-radius: 20px;
+                max-width: 450px;
+            }
+        }
+
+        .cart-modal-content,
+        .custom-content {
+            background: #141414;
             width: 100%;
             border-radius: 20px 20px 0 0;
-            padding: 20px;
-            max-height: 80vh;
-            display: flex; flex-direction: column;
+            padding: 25px;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #333;
         }
-        
-        .cart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px; }
-        .cart-header h2 { margin: 0; color: var(--text-main); font-size: 1.4rem; font-family: 'Outfit', sans-serif; }
-        .close-modal { color: #888; font-size: 1.8rem; cursor: pointer; }
-        
-        .cart-items-list { flex: 1; overflow-y: auto; margin-bottom: 15px; }
-        .cart-item-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; background: rgba(255,255,255,0.03); padding: 10px; border-radius: 10px; }
-        .cart-item-name { color: var(--text-main); font-weight: 500; font-size: 0.95rem; }
-        .cart-item-price { color: var(--primary); font-size: 0.85rem; display: block; }
-        
-        .cart-item-controls { display: flex; align-items: center; gap: 8px; background: #222; padding: 4px; border-radius: 6px; }
-        .btn-micro { width: 24px; height: 24px; background: #333; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
-        
-        .cart-footer { border-top: 1px solid #333; padding-top: 15px; }
-        .cart-total-row { display: flex; justify-content: space-between; color: var(--text-main); font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; }
-        .btn-checkout-full { width: 100%; background: #25D366; color: white; border: none; padding: 14px; border-radius: 12px; font-weight: 700; font-size: 1rem; cursor: pointer; }
+
+        .cart-header,
+        .custom-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
+        }
+
+        .cart-header h2,
+        .custom-header h2 {
+            margin: 0;
+            color: var(--text-main);
+            font-size: 1.4rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .close-modal,
+        .close-custom {
+            color: #888;
+            font-size: 2rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .cart-items-list {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 15px;
+        }
+
+        .cart-item-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            transition: border 0.3s;
+        }
+
+        .cart-item-row:hover {
+            border-color: rgba(255, 107, 53, 0.3);
+        }
+
+        .cart-item-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .cart-item-name {
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .cart-item-details {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.8rem;
+            color: #aaa;
+            padding-left: 8px;
+            border-left: 2px solid #333;
+            margin-top: 4px;
+        }
+
+        .cart-item-price {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-top: 4px;
+        }
+
+        .cart-item-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #222;
+            padding: 4px;
+            border-radius: 6px;
+            height: fit-content;
+        }
+
+        .btn-micro {
+            width: 26px;
+            height: 26px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-micro:active {
+            background: var(--primary);
+        }
+
+        .cart-footer {
+            border-top: 1px solid #333;
+            padding-top: 15px;
+        }
+
+        .cart-total-row {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-main);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .btn-checkout-full {
+            width: 100%;
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        /* Custom Modal Specifics */
+        .custom-price {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 5px 0 0;
+        }
+
+        .custom-body {
+            flex: 1;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+
+        .custom-section {
+            margin-bottom: 25px;
+        }
+
+        .custom-section h3 {
+            font-size: 1rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 12px;
+        }
+
+        .option-card {
+            background: #1f1f1f;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option-card.selected {
+            border-color: var(--primary);
+            background: rgba(255, 107, 53, 0.1);
+        }
+
+        .option-card img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .opt-name {
+            font-size: 0.85rem;
+            color: #ddd;
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+
+        .opt-price {
+            font-size: 0.8rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .btn-add-custom {
+            width: 100%;
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        /* Add button styles */
+        .price-action-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 5px;
+        }
+
+        .action-box {
+            display: flex;
+            align-items: center;
+        }
+
+        .add-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .item-controls {
+            display: none;
+            align-items: center;
+            background: var(--bg-card);
+            border: 1px solid var(--primary);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .qty-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 28px;
+            height: 28px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .qty-val {
+            min-width: 25px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            padding: 0 5px;
+        }
     </style>
 </body>
+
 </html>
