@@ -1442,14 +1442,28 @@
                     font-size: 1.1rem;
                 }
 
-                .btn-view-cart {
-                    background: var(--primary);
+                .btn-add-custom {
+                    width: 100%;
+                    background: #FF6B35;
+                    /* Fallback from var(--primary-gradient) */
+                    background: linear-gradient(135deg, #FF6B35 0%, #FF4500 100%);
                     color: white;
                     border: none;
-                    padding: 8px 16px;
-                    border-radius: 8px;
-                    font-weight: 600;
+                    padding: 16px;
+                    border-radius: 12px;
+                    font-weight: 700;
+                    font-size: 1.1rem;
                     cursor: pointer;
+                    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
+                    margin-top: 10px;
+                }
+
+                .custom-footer {
+                    border-top: 1px solid #333;
+                    padding-top: 15px;
+                    background: #141414;
+                    /* Ensure background is opaque */
+                    z-index: 10;
                 }
 
                 /* Modal General */
