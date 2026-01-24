@@ -1128,25 +1128,30 @@
         }
 
         function addToCartFromCustom() {
-            // Generate unique Key
-            // Sort extras to handle permutations consistently
-            const extraIds = selectedExtras.map(e => e.id).sort().join(',');
-            const compositeKey = `${currentCustomItem.id}|${selectedBase.id}|${extraIds}`;
+            try {
+                // Generate unique Key
+                // Sort extras to handle permutations consistently
+                const extraIds = selectedExtras.map(e => e.id).sort().join(',');
+                const compositeKey = `${currentCustomItem.id}|${selectedBase.id}|${extraIds}`;
 
-            // Calculate final price per unit
-            let unitPrice = currentCustomItem.basePrice + selectedBase.price;
-            selectedExtras.forEach(e => unitPrice += e.price);
+                // Calculate final price per unit
+                let unitPrice = currentCustomItem.basePrice + selectedBase.price;
+                selectedExtras.forEach(e => unitPrice += e.price);
 
-            // Create descriptive name for cart
-            let descName = currentCustomItem.name;
-            // storing details for display
-            const details = {
-                baseName: selectedBase.name,
-                extrasNames: selectedExtras.map(e => e.name)
-            };
+                // Create descriptive name for cart
+                let descName = currentCustomItem.name;
+                // storing details for display
+                const details = {
+                    baseName: selectedBase.name,
+                    extrasNames: selectedExtras.map(e => e.name)
+                };
 
-            addItemToCartState(compositeKey, descName, unitPrice, details, currentCustomItem.id);
-            closeCustom();
+                addItemToCartState(compositeKey, descName, unitPrice, details, currentCustomItem.id);
+                closeCustom();
+            } catch (err) {
+                alert("Error adding custom item: " + err.message);
+                console.error(err);
+            }
         }
 
         // Core Cart Logic
