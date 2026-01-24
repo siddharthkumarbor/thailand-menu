@@ -1503,9 +1503,21 @@
                     border-radius: 20px 20px 0 0;
                     padding: 25px;
                     max-height: 85vh;
+                    /* Max height to respect screen */
                     display: flex;
                     flex-direction: column;
                     border: 1px solid #333;
+                    position: relative;
+                    /* Context */
+                }
+
+                /* Mobile footer fix */
+                .custom-footer {
+                    margin-top: auto;
+                    z-index: 100;
+                    background: #141414;
+                    position: sticky;
+                    bottom: 0;
                 }
 
                 .cart-header,
