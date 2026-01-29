@@ -1133,10 +1133,10 @@
                 function renderCustomOptions() {
                     // Render Base
                     const baseContainer = document.getElementById('base-options');
-                    baseContainer.innerHTML = '';
+                    let baseHtml = '';
                     modifiersData.base.forEach(opt => {
                         const isSelected = selectedBase.id === opt.id;
-                        baseContainer.innerHTML += `
+                        baseHtml += `
                     <div class="option-card ${isSelected ? 'selected' : ''}" onclick="selectBase('${opt.id}')">
                         <img src="${opt.img}" alt="${opt.name}">
                         <div class="opt-name">${opt.name}</div>
@@ -1144,13 +1144,14 @@
                     </div>
                 `;
                     });
+                    baseContainer.innerHTML = baseHtml;
 
                     // Render Extras
                     const extraContainer = document.getElementById('extra-options');
-                    extraContainer.innerHTML = '';
+                    let extrasHtml = '';
                     modifiersData.extras.forEach(opt => {
                         const isSelected = selectedExtras.some(e => e.id === opt.id);
-                        extraContainer.innerHTML += `
+                        extrasHtml += `
                     <div class="option-card ${isSelected ? 'selected' : ''}" onclick="toggleExtra('${opt.id}')">
                         <img src="${opt.img}" alt="${opt.name}">
                         <div class="opt-name">${opt.name}</div>
@@ -1158,6 +1159,7 @@
                     </div>
                 `;
                     });
+                    extraContainer.innerHTML = extrasHtml;
                 }
 
                 function selectBase(id) {
