@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Benchmark: innerHTML vs String Accumulation</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .container { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; display: none; } /* Hidden to avoid layout noise during bench, or keep visible? Layout is part of cost. */
+        .result { margin-top: 10px; font-weight: bold; }
+        .option-card { border: 1px solid #ddd; padding: 5px; margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Benchmark: innerHTML += vs String Accumulation</h1>
+    <button onclick="runBenchmark()">Run Benchmark</button>
+    <div id="results" class="result"></div>
+
+    <!-- Containers for rendering -->
+    <div id="base-options" class="container" style="display:block"></div>
+    <div id="extra-options" class="container" style="display:block"></div>
+
+    <script>
+        // --- Data Setup ---
+        const rawData = {
+            base: [
+                { id: 'paratha', name: 'Malabar Paratha', price: 0, img: 'https://placehold.co/80x80?text=Paratha' },
+                { id: 'wheat', name: 'Whole Wheat', price: 10, img: 'https://placehold.co/80x80?text=Wheat' }
+            ],
+            extras: [
+                { id: 'cheese', name: 'Cheese Slice', price: 20, img: 'https://placehold.co/80x80?text=Cheese' },
+                { id: 'egg', name: 'Extra Egg', price: 15, img: 'https://images.unsplash.com/photo-1587486913049-53fc88980cfc?w=100&h=100&fit=crop' },
+                { id: 'mayo', name: 'Extra Mayo', price: 10, img: 'https://placehold.co/80x80?text=Mayo' },
+                { id: 'spicy', name: 'Spicy Sauce', price: 5, img: 'https://placehold.co/80x100?text=Spicy' }
+            ]
+        };
+
+        // Expand data for benchmark
+        const modifiersData = { base: [], extras: [] };
+        const ITEMS = 1000;
+
+        for (let i = 0; i < ITEMS; i++) {
+            modifiersData.base.push({ ...rawData.base[i % 2], id: `base-${i}` });
+            modifiersData.extras.push({ ...rawData.extras[i % 4], id: `extra-${i}` });
+        }
+
+        const selectedBase = modifiersData.base[0];
+        const selectedExtras = [modifiersData.extras[0]];
+
+        // --- Original (Inefficient) ---
+        function renderOriginal() {
+            const baseContainer = document.getElementById('base-options');
+            baseContainer.innerHTML = '';
+            modifiersData.base.forEach(opt => {
+                const isSelected = selectedBase.id === opt.id;
+                baseContainer.innerHTML += `
+                    <div class="option-card ${isSelected ? 'selected' : ''}">
+                        <img src="${opt.img}" alt="${opt.name}">
+                        <div class="opt-name">${opt.name}</div>
+                        <div class="opt-price">${opt.price > 0 ? '+' + opt.price + '฿' : 'Free'}</div>
+                    </div>
+                `;
+            });
+
+            const extraContainer = document.getElementById('extra-options');
+            extraContainer.innerHTML = '';
+            modifiersData.extras.forEach(opt => {
+                const isSelected = selectedExtras.some(e => e.id === opt.id);
+                extraContainer.innerHTML += `
+                    <div class="option-card ${isSelected ? 'selected' : ''}">
+                        <img src="${opt.img}" alt="${opt.name}">
+                        <div class="opt-name">${opt.name}</div>
+                        <div class="opt-price">+${opt.price}฿</div>
+                    </div>
+                `;
+            });
+        }
+
+        // --- Optimized (String Accumulation) ---
+        function renderOptimized() {
+            const baseContainer = document.getElementById('base-options');
+            let baseHTML = '';
+            modifiersData.base.forEach(opt => {
+                const isSelected = selectedBase.id === opt.id;
+                baseHTML += `
+                    <div class="option-card ${isSelected ? 'selected' : ''}">
+                        <img src="${opt.img}" alt="${opt.name}">
+                        <div class="opt-name">${opt.name}</div>
+                        <div class="opt-price">${opt.price > 0 ? '+' + opt.price + '฿' : 'Free'}</div>
+                    </div>
+                `;
+            });
+            baseContainer.innerHTML = baseHTML;
+
+            const extraContainer = document.getElementById('extra-options');
+            let extraHTML = '';
+            modifiersData.extras.forEach(opt => {
+                const isSelected = selectedExtras.some(e => e.id === opt.id);
+                extraHTML += `
+                    <div class="option-card ${isSelected ? 'selected' : ''}">
+                        <img src="${opt.img}" alt="${opt.name}">
+                        <div class="opt-name">${opt.name}</div>
+                        <div class="opt-price">+${opt.price}฿</div>
+                    </div>
+                `;
+            });
+            extraContainer.innerHTML = extraHTML;
+        }
+
+        async function runBenchmark() {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = 'Running...';
+
+            // Wait a frame to let UI update
+            await new Promise(r => requestAnimationFrame(r));
+            await new Promise(r => setTimeout(r, 100));
+
+            const ITERATIONS = 20; // Reduced iterations because innerHTML += is VERY slow with 1000 items
+
+            // Measure Original
+            const startOriginal = performance.now();
+            for (let i = 0; i < ITERATIONS; i++) {
+                renderOriginal();
+            }
+            const endOriginal = performance.now();
+            const timeOriginal = endOriginal - startOriginal;
+
+            // Measure Optimized
+            const startOptimized = performance.now();
+            for (let i = 0; i < ITERATIONS; i++) {
+                renderOptimized();
+            }
+            const endOptimized = performance.now();
+            const timeOptimized = endOptimized - startOptimized;
+
+            resultsDiv.innerHTML = `
+                <p>Items per render: ${ITEMS * 2}</p>
+                <p>Iterations: ${ITERATIONS}</p>
+                <p>Original Time: ${timeOriginal.toFixed(2)} ms</p>
+                <p>Optimized Time: ${timeOptimized.toFixed(2)} ms</p>
+                <p style="color: green; font-size: 1.2em">Improvement: ${(timeOriginal / timeOptimized).toFixed(2)}x faster</p>
+            `;
+        }
+    </script>
+</body>
+</html>
